@@ -1,0 +1,35 @@
+﻿@model IEnumerable<MvcMovie.Models.Movie>
+
+<h2>Movies</h2>
+<p>
+    <a href="/Movies/Create">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Release Date</th>
+            <th>Genre</th>
+            <th>Price</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.ReleaseDate.ToShortDateString()</td>
+                <td>@item.Genre</td>
+                <td>@item.Price</td>
+                <td>
+                    <a href="/Movies/Details/@item.ID">Details</a> |
+                    <a href="/Movies/Edit/@item.ID">Edit</a> |
+                    <a href="/Movies/Delete/@item.ID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

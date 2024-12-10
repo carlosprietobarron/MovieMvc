@@ -1,0 +1,18 @@
+﻿@model MvcMovie.Models.Movie
+
+<h2>Movie Details</h2>
+
+<div>
+    <strong>Title:</strong> @Model.Title
+</div>
+<div>
+    <strong>Release Date:</strong> @Model.ReleaseDate.ToShortDateString()
+</div>
+<div>
+    <strong>Genre:</strong> @Model.Genre
+</div>
+<div>
+    <strong>Price:</strong> @Model.Price
+</div>
+
+<a href="/Movies">Back to List</a>

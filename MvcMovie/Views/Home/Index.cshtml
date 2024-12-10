@@ -1,0 +1,31 @@
+﻿@model IEnumerable<MvcMovie.Models.Movie>
+
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome to MvcMovie</h1>
+    <p class="lead">Use the menu below to navigate through the application.</p>
+
+    <ul class="nav flex-column">
+        <li class="nav-item">
+            <a class="nav-link" href="/Movies">View All Movies</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Movies/Create">Add New Movie</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Movies/Details/1">View Movie Details</a> <!-- Ejemplo con ID = 1 -->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Movies/Edit/1">Edit a Movie</a> <!-- Ejemplo con ID = 1 -->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Movies/Delete/1">Delete a Movie</a> <!-- Ejemplo con ID = 1 -->
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/Home/Privacy">Privacy Policy</a>
+        </li>
+    </ul>
+</div>
